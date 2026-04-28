@@ -1,16 +1,51 @@
+# Financial Sentiment Analysis: News vs Stock Market
 
-# Financial Sentiment Analysis Using News Headlines and Stock Market Data
+This project analyzes the relationship between news sentiment and stock market movements using machine learning and statistical analysis techniques.
 
-This project focuses on analyzing financial news headlines and examining their relationship with stock market movements. Instead of relying solely on numerical financial data, this study incorporates textual data to better understand how public sentiment may influence market behavior.
+## 📌 Project Overview
 
-The dataset used in this project is the “Daily News for Stock Market Prediction” dataset obtained from Kaggle. It combines Reddit news headlines from the WorldNews channel with Dow Jones Industrial Average (DJIA) stock data. The dataset includes daily news headlines ranked by popularity, along with a binary label indicating whether the market increased or decreased on that day.
+The goal of this project is to investigate whether the sentiment of daily news headlines can help predict stock market direction. The project combines **text data (news headlines)** with **financial data (DJIA index)** to perform data enrichment.
 
-The goal of this project is to determine whether the sentiment of daily news headlines has any predictive power over stock market direction. To achieve this, Natural Language Processing (NLP) techniques are applied to convert text data into sentiment scores. These scores are then analyzed in relation to market movements.
+## 📊 Dataset
 
-The project follows a structured data science workflow. First, the data is loaded and preprocessed by combining multiple news headlines into a single textual feature for each day. Then, exploratory data analysis (EDA) is conducted to understand the distribution and trends within the dataset. After that, sentiment analysis is performed using the TextBlob library to extract polarity scores from the news text.
+The dataset used is:
 
-In the next step, a statistical hypothesis test is conducted to examine whether there is a significant relationship between sentiment scores and market direction. Finally, a machine learning model (Decision Tree Classifier) is trained to predict whether the market will go up or down based on sentiment features. The model is evaluated using the ROC-AUC metric.
+**Daily News for Stock Market Prediction (Kaggle)**  
+https://www.kaggle.com/datasets/aaron7sun/stocknews
 
-This project demonstrates how combining textual data with financial data can provide deeper insights into market behavior and highlights the importance of data enrichment in modern data science applications.
+It includes:
+- News headlines (Top 25 per day)
+- Stock market labels (0 = down, 1 = up)
+- Date range: 2008 – 2016
 
-This project is developed as part of the DSA210 course at Sabancı University.
+## ⚙️ Methods Used
+
+- Data Cleaning & Preprocessing
+- Sentiment Analysis (TextBlob)
+- Exploratory Data Analysis (EDA)
+- Hypothesis Testing (Correlation)
+- Machine Learning Models:
+  - Decision Tree
+  - Random Forest
+
+## 📈 Results
+
+- Correlation between sentiment and market movement: **very weak**
+- p-value > 0.05 → No statistically significant relationship
+- Model Performance:
+  - AUC Score ≈ **0.53**
+
+## 🧠 Conclusion
+
+The results suggest that news sentiment alone is not a strong predictor of stock market movement. Financial markets are complex systems influenced by many factors beyond daily news headlines.
+
+## 🚀 How to Run
+
+1. Download dataset from Kaggle
+2. Upload `Combined_News_DJIA.csv` to Colab
+3. Run the notebook step-by-step
+
+## 👤 Author
+
+Taylan Torun  
+DSA210 Project
