@@ -1,63 +1,67 @@
 # Project Proposal: Financial Sentiment Analysis
 
 ## Objective
-The objective of this project is to analyze whether the sentiment of daily news headlines has a measurable impact on stock market movements.
+
+The objective of this project is to analyze whether news sentiment can be used to predict stock market movements.
+
+---
 
 ## Research Question
-Can sentiment extracted from news headlines be used to predict whether the stock market will go up or down?
+
+Can daily news sentiment significantly predict stock market direction?
+
+---
 
 ## Data Sources
-The project uses publicly available datasets:
-- Reddit news headlines dataset
-- DJIA stock market dataset
 
-These datasets will be merged based on date to create a unified dataset.
+- Kaggle News Dataset (Reddit headlines)
+- DJIA stock data
+- S&P 500 index (yfinance)
+
+---
 
 ## Methodology
 
-### 1. Data Preparation
-- Clean and merge datasets
-- Combine multiple news headlines into a single text column
-- Extract sentiment scores using TextBlob
-- Create additional features (word count, text length)
+1. Data preprocessing
+2. Sentiment analysis (TextBlob)
+3. Feature engineering
+4. Exploratory data analysis
+5. Hypothesis testing (t-test)
+6. Model training (Decision Tree, Random Forest)
 
-### 2. Exploratory Data Analysis
-- Analyze distribution of sentiment values
-- Compare sentiment across market movements
-- Visualize patterns using plots
-
-### 3. Hypothesis Testing
-- Perform a t-test to compare sentiment between:
-  - Market up days
-  - Market down days
-
-### 4. Machine Learning
-- Train classification models:
-  - Decision Tree
-  - Random Forest
-- Evaluate performance using:
-  - Accuracy
-  - ROC-AUC
+---
 
 ## Expected Outcome
-It is expected that sentiment may have some influence on market movements, but likely not strong enough to fully explain market behavior.
+
+It is expected that sentiment may have some influence on market movements,
+but not strong enough to fully predict them.
+
+---
 
 ## Contribution
-This project aims to:
-- Combine textual sentiment analysis with financial data
-- Evaluate the predictive power of simple NLP techniques
-- Provide insight into the limitations of sentiment-based market prediction
+
+- Combine NLP with financial data
+- Evaluate predictive power of sentiment
+- Highlight limitations of simple models
+
+---
 
 ## Tools and Libraries
+
 - Python
 - Pandas
 - Scikit-learn
 - TextBlob
 - Matplotlib / Seaborn
 
-## AI Usage Statement
-AI tools such as ChatGPT may be used for:
-- Code debugging
-- Structural guidance
+---
 
-All outputs will be reviewed and verified.
+## AI Usage Statement
+
+AI tools (ChatGPT) were used for:
+
+- Code debugging
+- Structuring the project
+- Writing documentation
+
+All outputs were reviewed and verified.
