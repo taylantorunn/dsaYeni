@@ -106,22 +106,25 @@ SP500 and sentiment have similar importance, but neither provides strong predict
 - yfinance
 
 ---
-
 ## AI Usage Statement
 
-AI tools such as ChatGPT were used for:
+AI tools (ChatGPT) were used during this project for:
 
-- Debugging code
-- Structuring notebooks
-- Writing documentation
+- Debugging Python code (e.g., fixing pandas merge errors)
+- Structuring notebooks and project workflow
+- Generating boilerplate code for data analysis and modeling
+- Writing documentation (README and proposal)
 
-Example prompts:
-- Fix pandas merge error
-- Write README for sentiment analysis project
+Example prompts used:
 
-All outputs were reviewed and verified before use.
+- "Fix pandas merge error with SP500 dataset"
+- "Write t-test code to compare two groups in pandas"
+- "Create machine learning model training code with sklearn"
+- "Write a structured README for a data science project"
 
----
+All outputs were reviewed, tested, and modified before use.
+
+
 
 ## Requirements
 
