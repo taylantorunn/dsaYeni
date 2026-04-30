@@ -1,114 +1,128 @@
 # Financial Sentiment Analysis: News vs Stock Market
 
-## Overview  
-This project analyzes the relationship between news sentiment and stock market movements using statistical analysis and machine learning techniques.
+## Overview
+This project investigates the relationship between daily news sentiment and stock market movements.
+The goal is to evaluate whether simple Natural Language Processing (NLP) techniques can help predict market direction.
 
 ---
 
-## Project Overview  
+## Datasets
 
-The goal of this project is to investigate whether the sentiment of daily news headlines can help predict stock market direction. The project combines textual data (news headlines) with financial data (DJIA index).
+### 1. News Dataset
+Source: Kaggle  
+Link: https://www.kaggle.com/datasets/aaron7sun/stocknews  
+Description: Daily top news headlines collected from Reddit WorldNews.
 
----
+### 2. Financial Market Data
+Source: Kaggle (same dataset)  
+Data: Dow Jones Industrial Average (DJIA)
 
-## Datasets  
-
-This project uses two datasets:
-
-- RedditNews.csv  
-- upload_DJIA_table.csv  
-
-Source (Kaggle):  
-👉 https://www.kaggle.com/datasets/aaron7sun/stocknews  
-
-The datasets are merged using the Date column.
+### 3. Additional Dataset (Enrichment)
+Source: Yahoo Finance (via yfinance)  
+Data: S&P 500 Index (SP500)
 
 ---
 
-## Data Preparation  
+## Project Structure
 
-- Converted Date columns to datetime format  
-- Grouped news by date  
-- Combined headlines into a single text column  
-- Extracted sentiment scores using TextBlob  
-- Created additional features:
-  - headline_length  
-  - word_count  
-- Final dataset saved as: final_dataset.csv  
+- data_preparation.ipynb → Data cleaning & feature engineering
+- eda.ipynb → Exploratory data analysis
+- hypothesis_testing.ipynb → Statistical testing (t-test)
+- model_training.ipynb → Machine learning models
 
 ---
 
-## Exploratory Data Analysis  
+## Methodology
 
-- Market movement distribution (Up vs Down)  
-- Sentiment distribution  
-- Sentiment vs market movement comparison  
+### Feature Engineering
+- Sentiment score (TextBlob)
+- Headline length
+- Word count
+- SP500 index
 
----
-
-## Hypothesis Testing  
-
-A t-test was applied to compare sentiment scores between market up and down days.
-
-Result:  
-- p-value > 0.05  
-- No statistically significant relationship found  
+### Target Variable
+- 1 → Market goes up next day
+- 0 → Market goes down next day
 
 ---
 
-## Machine Learning Models  
+## Hypothesis Testing
 
-- Decision Tree  
-- Random Forest  
+A t-test was conducted to compare sentiment between upward and downward market days.
 
-Evaluate performance using:  
-- Accuracy  
-- ROC-AUC  
+Result:
+p-value ≈ 0.32
 
----
-
-## Results  
-
-- Accuracy ≈ 0.50  
-- ROC-AUC ≈ 0.50–0.52  
+Interpretation:
+There is no statistically significant difference between the two groups.
 
 ---
 
-## Expected Outcome  
+## Model Results
 
-It is expected that sentiment may have some influence on market movements, but likely not strong enough to fully explain market behavior.
+Models used:
+- Decision Tree
+- Random Forest
 
----
+Performance:
+- Accuracy ≈ 0.47 – 0.50
+- ROC-AUC ≈ 0.46 – 0.50
 
-## Contribution  
-
-This project aims to:  
-
-- Combine textual sentiment analysis with financial data  
-- Evaluate the predictive power of simple NLP techniques  
-- Provide insight into the limitations of sentiment-based market prediction  
-
----
-## Final Conclusion
-
-The results of this project indicate that sentiment extracted from news headlines alone does not provide sufficient predictive power for stock market movements. Despite applying statistical testing and machine learning models, performance remained close to random. This highlights the complexity of financial markets and suggests that more advanced features and models are required for meaningful prediction.
----
-
-## Tools and Libraries  
-
-- Python  
-- Pandas  
-- Scikit-learn  
-- TextBlob  
-- Matplotlib / Seaborn  
+Interpretation:
+Model performance is close to random guessing, indicating weak predictive power.
 
 ---
 
-## AI Usage Statement  
+## Feature Importance
 
-AI tools such as ChatGPT were used for:  
+Most important features:
+1. SP500
+2. Sentiment
+3. Headline length
+4. Word count
 
-- Code debugging  
-- Structural guidance  
+Insight:
+SP500 and sentiment have similar importance, but neither provides strong predictive power alone.
 
-All outputs were reviewed and verified.
+---
+
+## Conclusion
+
+- News sentiment alone is not sufficient to predict market movements
+- Financial markets are influenced by many complex factors
+- Simple NLP methods are limited in predictive capability
+
+---
+
+## Tools and Libraries
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- TextBlob
+- Matplotlib / Seaborn
+- SciPy
+- yfinance
+
+---
+
+## AI Usage Statement
+
+AI tools such as ChatGPT were used for:
+
+- Debugging code
+- Structuring notebooks
+- Writing documentation
+
+Example prompts:
+- Fix pandas merge error
+- Write README for sentiment analysis project
+
+All outputs were reviewed and verified before use.
+
+---
+
+## Requirements
+
+See requirements.txt for dependencies.
