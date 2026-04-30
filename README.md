@@ -18,6 +18,9 @@ This project uses two datasets:
 - RedditNews.csv  
 - upload_DJIA_table.csv  
 
+Source (Kaggle):  
+👉 https://www.kaggle.com/datasets/aaron7sun/stocknews  
+
 The datasets are merged using the Date column.
 
 ---
