@@ -89,6 +89,10 @@ This project aims to:
 - Provide insight into the limitations of sentiment-based market prediction  
 
 ---
+## Final Conclusion
+
+The results of this project indicate that sentiment extracted from news headlines alone does not provide sufficient predictive power for stock market movements. Despite applying statistical testing and machine learning models, performance remained close to random. This highlights the complexity of financial markets and suggests that more advanced features and models are required for meaningful prediction.
+---
 
 ## Tools and Libraries  
 
